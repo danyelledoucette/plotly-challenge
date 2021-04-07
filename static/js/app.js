@@ -124,11 +124,11 @@ function selectData(selectedID){
  // BONUS: GAUGE CHART
 
  // Gauge Chart to plot weekly washing frequency 
- const guageDisplay = d3.select("#gauge");
- guageDisplay.html(""); 
+ const gaugeDisplay = d3.select("#gauge");
+ gaugeDisplay.html(""); 
  const washFreq = idMetadata[0].wfreq;
  
- const guageData = [
+ const gaugeData = [
     {
       domain: { x: [0, 1], y: [0, 1] },
       value: washFreq,
@@ -162,7 +162,7 @@ function selectData(selectedID){
                     };
  
  // Plot using Plotly
-  Plotly.newPlot('gauge', guageData, gaugeLayout); 
+  Plotly.newPlot('gauge', gaugeData, gaugeLayout); 
  
  });
  }
